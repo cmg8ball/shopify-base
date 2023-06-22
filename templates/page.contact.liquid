@@ -1,15 +1,13 @@
 <div class="layout">
 
-  <!-- @TODO: Handle empty states -->
+  {% if page.title != blank %}<h1>{{ page.title }}</h1>{% endif %}
 
-  <!-- @TODO: Title data -->
-    <h1>
-  Title
-  </h1>
+  {% if page.content != blank %}
+    <div class="rte">{{ page.content }}</div>
+  {% endif %}
 
-  <!-- @TODO: Content data -->
-    <div class="rte"> <h2>Hello World!</h2>
-    Content
-  </div>
+  {% render 'form-contact', show_phone: false %}
 
 </div>
+
+{% section 'features' %}
