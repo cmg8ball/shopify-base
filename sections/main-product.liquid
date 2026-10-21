@@ -47,7 +47,7 @@
 
       <br>
 
-      {% render 'form-product', product, current_variant: current_variant %}
+      {% render 'form-product', current_variant: current_variant %}
 
     </div>
 
@@ -79,3 +79,13 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'form-product', product, current_variant: current_variant %}"
+  to: "{% render 'form-product', current_variant: current_variant %}"
+  position: 1557..1618
+{% endcomment %}
